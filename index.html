@@ -1,40 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-from-bottom {
+    animation: slideUp 1s ease-out 3s forwards;
+    opacity: 0; /* Make it not show before animation */
+  }
+</style>
+<link rel="stylesheet" href="custom.css" />
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
 
-		<title>reveal.js</title>
+    <title>reveal.js – The HTML Presentation Framework</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>AI-driven development</h1>
+          <p class="custom-font fragment">(una primera aproximación)</p>
+        </section>
+        <section>
+          <h2>Para qué es esta charla:</h2>
+          <ul>
+            <li class="fragment">
+              Enseñar herramientas útiles de IA tal vez no conozcáis
+            </li>
+            <li class="fragment">
+              Ver posibles aplicaciones en el día a día del desarrollo de
+              sofware
+            </li>
+            <li class="fragment">
+              “Trucos” de alguien que lleva ya un tiempo usando estas
+              herramientas
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Para qué NO es esta charla:</h2>
+          <ul>
+            <li class="fragment">
+              Hablar extensivamente sobre los peligros de seguridad de la IA
+            </li>
+            <li class="fragment">
+              Discutir los aspectos éticos y morales de la IA
+            </li>
+            <li class="fragment">
+              Profundizar en los aspectos técnicos y algoritmos detrás de la IA
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <div class="r-hstack justify-center">
+            <img
+              src="/assets/images/chatgpt-openai-logo-icon-free-png.webp"
+              alt="GitHub Copilot Logo"
+              style="width: 200px; height: 200px; margin-right: 50px"
+            />
+            <h2 style="margin-left: 30px">Disclaimer</h2>
+          </div>
+          <ul>
+            <aside class="notes">
+              <p>
+                ChatGPT/gpt-4/gpt-3.5/cursor/copilot… los usaré de manera
+                intercambiable
+              </p>
+            </aside>
+            <section data-auto-animate>
+              <li>Casi todo lo que vamos a usar les pertenece</li>
+              <section style="display: flex; justify-content: center">
+                <figure>
+                  <img
+                    src="/assets/images/sam.png"
+                    alt="Sam altman"
+                    style="
+                      width: 500px;
+                      height: auto;
+                      max-width: 100%;
+                      max-height: 100%;
+                      margin-top: 1500px;
+                      margin-left: 190px;
+                    "
+                  />
+                </figure>
+              </section>
+            </section>
+          </ul>
+        </section>
+        <section>
+          <div class="r-hstack justify-center">
+            <img
+              src="/assets/images/chatgpt-openai-logo-icon-free-png.webp"
+              alt="GitHub Copilot Logo"
+              style="width: 200px; height: 200px; margin-right: 50px"
+            />
+            <h2 style="margin-left: 30px">Disclaimer</h2>
+          </div>
+          <ul>
+            <aside class="notes">
+              <p>
+                ChatGPT/gpt-4/gpt-3.5/cursor/copilot… los usaré de manera
+                intercambiable
+              </p>
+            </aside>
+            <section data-auto-animate>
+              <li>Casi todo lo que vamos a usar les pertenece</li>
+              <section style="display: flex; justify-content: center">
+                <figure>
+                  <img
+                    src="/assets/images/sam.png"
+                    alt="Sam altman"
+                    style="
+                      width: 500px;
+                      height: auto;
+                      max-width: 100%;
+                      max-height: 100%;
+                      margin-top: -150px;
+                      margin-left: 200px;
+                    "
+                  />
+                </figure>
+              </section>
+            </section>
+          </ul>
+        </section>
+        <section>
+          <h2>ChatGPT, tu profe de confianza</h2>
+          <aside class="notes">
+            <p>
+              En esta sección, vamos a hablar sobre cómo ChatGPT puede ser un
+              recurso valioso para los desarrolladores de software. No sólo
+              puede ayudar a resolver problemas y responder preguntas, sino que
+              también puede actuar como un profesor, adaptándose a las
+              necesidades individuales del usuario.
+            </p>
+          </aside>
+          <ul>
+            <li class="fragment">
+              Profesor incansable y adaptado a tus necesidades
+            </li>
+			<li class="fragment">
+			  Te evita pasar horas buscando en documentación, stack overflow,
+			  issues de github…
+			</li>
+			<li class="fragment">
+			  Te explica esos odiosos y temidos archivos de configuración
+			</li>
+
+            <li class="fragment">
+              Más rápido que google para la <p class="custom-font" style="display: inline;">*mayoría*</p> de la información que
+              necesitas
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <figure data-auto-animate>
+            <img
+              src="/assets/images/approximate-knowledge.gif"
+              alt="Approximate Knowledge"
+            />
+          </figure>
+        </section>
+		<section >
+			<h2>¿En qué falla?</h2>
+			<ul data-auto-animate>
+			  <li>
+				No sabe nada a partir de 2021 (Ahora tiene acceso a Bing pero…)
+			  </li>
+			  <li>Si tienes problemas complejos con typescript, olvídate</li>
+			  <li>Un porcentaje de las veces va a mentirte</li>
+			</ul>
+		  </section>
+        <section>
+          <h2>Lo que me interesa es el código</h2>
+          <p>Chatgpt puede…</p>
+          <ul>
+            <li>Prototipar código</li>
+            <li>Realizar refactors a petición</li>
+            <li>Encontrar posibles bugs</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            No me gusta andar copiando y pegando como en los tiempos de
+            stackOverflow, quiero sentir la velocidad…
+          </h2>
+        </section>
+        <section data-auto-animate>
+          <div class="r-hstack justify-center">
+            <img
+              src="/assets/images/GitHub-Copilot-logo-1040x650.png"
+              alt="GitHub Copilot Logo"
+              style="width: 200px; height: 200px; margin-right: 10px"
+            />
+            <h2>Github Copilot</h2>
+          </div>
+          <figure>
+            <img
+              src="/assets/images/copilot-video.gif"
+              alt="Copilot Video GIF"
+            />
+          </figure>
+          <figure>
+            <img
+              src="https://prod-files-secure.s3.us-west-2.amazonaws.com/0eeed394-496f-46f4-9d27-b6f8d8dad971/758d2ae6-8c14-4dd4-96df-be760f691208/222235486-10381ad0-0378-4772-a08d-b9d9c69646bf.gif"
+              alt="Copilot GIF"
+            />
+          </figure>
+        </section>
+        <section data-transition="fade" data-auto-animate>
+          <div class="r-hstack justify-center">
+            <img
+              src="/assets/images/GitHub-Copilot-logo-1040x650.png"
+              alt="GitHub Copilot Logo"
+              style="width: 200px; height: 200px; margin-right: 10px"
+            />
+            <h2>Github Copilot</h2>
+          </div>
+          <ul>
+            <li class="fragment">
+              Disponible en vscode, IDEs de jetbrains, neovim…
+            </li>
+            <li class="fragment">
+              Utiliza gpt-4 por debajo para autocompletar nuestro código
+            </li>
+            <li class="fragment">
+              Absorbe el contexto del archivo en el que estamos, archivos
+              relacionados, últimos archivos abiertos…
+            </li>
+            <li class="fragment">nos permite escribir código más rápido</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Contexto, contexto, contexto</h2>
+          <p>
+            Una de las mayores ventajas de copilot es la capacidad que tiene de
+            acceder al <p class="custom-font" style="display: inline;">*contexto*</p> de nuestro proyecto
+          </p>
+          <p>Al hacerlo, puede:</p>
+          <ul>
+            <li>
+              Proporcionar sugerencias de código específicas para el proyecto en
+              el que estás trabajando
+            </li>
+            <li>
+              Ayudarte a entender y utilizar bibliotecas y frameworks
+              específicos que usas en tu proyecto
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>¿Qué pasa cuando copilot no encuentra el contexto?</h2>
+          <figure>
+            <img
+              src="/assets/images/drake-josh-contexto.gif"
+              alt="Context GIF"
+            />
+          </figure>
+        </section>
+        <section data-auto-animate>
+          <div
+            data-id="title"
+            style="
+              position: absolute;
+              width: 40%;
+              left: 0;
+              top: 0%;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5),
+                0 5px 25px rgba(0, 0, 0, 0.2);
+              background-color: rgba(0, 0, 0, 0.9);
+              color: #fff;
+              padding: 20px;
+              font-size: 20px;
+              text-align: left;
+            "
+          >
+            <h2>Cursor, nuestro salvador</h2>
+            <p class="custom-font fragment">(hasta que salga algo mejor)</p>
+          </div>
+          <div style="margin-left: 5%; margin-top: 5%">
+            <iframe
+              data-autoplay
+              width="900"
+              height="540"
+              src="https://cursor.sh"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <div
+            data-id="title"
+            style="
+              position: absolute;
+              width: 40%;
+              right: 0;
+              top: 0%;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5),
+                0 5px 25px rgba(0, 0, 0, 0.2);
+              background-color: rgba(0, 0, 0, 0.9);
+              color: #fff;
+              padding: 20px;
+              font-size: 20px;
+              text-align: left;
+              z-index: 1;
+            "
+          >
+            <h2>Contexto más fácil</h2>
+          </div>
+          <div style="margin-left: 5%; margin-top: 5%">
+            <figure>
+              <img
+                src="/assets/images/copilot-video.gif"
+                alt="Copilot Video GIF"
+              />
+            </figure>
+          </div>
+        </section>
+        <section>
+          <h2>Cursor, nuestro salvador</h2>
+          <p class="custom-font fragment">(hasta que salga algo mejor)</p>
+          <ul>
+            <li>Permite actuar sobre una parte del código específico</li>
+            <li>
+              Crea un índice de nuestra base de código en local para poder
+              referenciarlo como contexto
+            </li>
+            <li>Nos permite “hablar con el código”</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Enséñame algo ya!</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+    </script>
+  </body>
 </html>

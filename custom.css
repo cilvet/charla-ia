@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Courier Prime Regular';
+    src: url('assets/Courier_Prime/CourierPrime-Regular.ttf') format('truetype');
+}
+
+h1, h2 {
+    font-family: Montserrat,"Arial Black",sans-serif;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+.custom-font {
+    font-family: 'Courier Prime Regular';
+    color: #e73f39;
+}
+
