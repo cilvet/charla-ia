@@ -54,6 +54,14 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
+			<aside class="notes">
+				<p>
+				  <ul>
+					<li>Por desarrollo con IA me refiero</li>
+					<li>LLMs</li>
+				  </ul>
+				</p>
+				 </aside>
           <h1>AI-driven development</h1>
           <p class="custom-font fragment">(una primera aproximación)</p>
         </section>
@@ -91,7 +99,6 @@
           <div class="r-hstack justify-center">
             <img
               src="/assets/images/chatgpt-openai-logo-icon-free-png.webp"
-              alt="GitHub Copilot Logo"
               style="width: 200px; height: 200px; margin-right: 50px"
             />
             <h2 style="margin-left: 30px">Disclaimer</h2>
@@ -128,7 +135,6 @@
           <div class="r-hstack justify-center">
             <img
               src="/assets/images/chatgpt-openai-logo-icon-free-png.webp"
-              alt="GitHub Copilot Logo"
               style="width: 200px; height: 200px; margin-right: 50px"
             />
             <h2 style="margin-left: 30px">Disclaimer</h2>
@@ -142,6 +148,16 @@
             </aside>
             <section data-auto-animate>
               <li>Casi todo lo que vamos a usar les pertenece</li>
+			  <aside class="notes">
+				<p>
+				  <ul>
+					<li>Sam Altman</li>
+					<li>Crearon gpt-3 en su día</li>
+					<li>Dieron el bombazo con chatGPT y sobre todo gpt-4</li>
+					<li>Esto nos lleva a su plato estrella =></li>
+				  </ul>
+				</p>
+				 </aside>
               <section style="display: flex; justify-content: center">
                 <figure>
                   <img
@@ -161,8 +177,16 @@
             </section>
           </ul>
         </section>
+		<section data-auto-animate>
+			<figure data-auto-animate>
+			  <img
+				src="/assets/images/chatgpt.png"
+				alt="Approximate Knowledge"
+			  />
+			</figure>
+		  </section>
         <section>
-          <h2>ChatGPT, tu profe de confianza</h2>
+          <h2>ChatGPT, tu profe de<p class="custom-font" style="display: inline">(casi)</p>confianza</h2>
           <aside class="notes">
             <p>
               En esta sección, vamos a hablar sobre cómo ChatGPT puede ser un
@@ -176,67 +200,108 @@
             <li class="fragment">
               Profesor incansable y adaptado a tus necesidades
             </li>
-			<li class="fragment">
-			  Te evita pasar horas buscando en documentación, stack overflow,
-			  issues de github…
-			</li>
-			<li class="fragment">
-			  Te explica esos odiosos y temidos archivos de configuración
-			</li>
+            <li class="fragment">
+              Te evita pasar horas buscando en documentación, stack overflow,
+              issues de github…
+            </li>
+            <li class="fragment">
+              Te explica esos odiosos y temidos archivos de configuración
+            </li>
 
             <li class="fragment">
-              Más rápido que google para la <p class="custom-font" style="display: inline;">*mayoría*</p> de la información que
-              necesitas
+              Más rápido que google para la
+              <p class="custom-font" style="display: inline">*mayoría*</p>
+              de la información que necesitas
             </li>
           </ul>
         </section>
         <section data-auto-animate>
           <figure data-auto-animate>
             <img
-              src="/assets/images/approximate-knowledge.gif"
+              src="/assets/images/approximate.gif"
               alt="Approximate Knowledge"
+              style="width: 100%; height: auto"
             />
           </figure>
         </section>
-		<section >
-			<h2>¿En qué falla?</h2>
-			<ul data-auto-animate>
-			  <li>
-				No sabe nada a partir de 2021 (Ahora tiene acceso a Bing pero…)
-			  </li>
-			  <li>Si tienes problemas complejos con typescript, olvídate</li>
-			  <li>Un porcentaje de las veces va a mentirte</li>
-			</ul>
-		  </section>
         <section>
-          <h2>Lo que me interesa es el código</h2>
-          <p>Chatgpt puede…</p>
-          <ul>
-            <li>Prototipar código</li>
-            <li>Realizar refactors a petición</li>
-            <li>Encontrar posibles bugs</li>
+          <h2>ChatGPT te miente</h2>
+		  <p class="custom-font fragment">(a veces)</p>
+
+          <aside class="notes">
+            <p>
+             
+            </p>
+          </aside>
+          <ul data-auto-animate>
+            <li class="fragment">
+              No sabe nada a partir de 2021
+              <p class="custom-font" style="display: inline">*</p>
+            </li>
+            <li class="fragment">Problemas con conceptos abstractos</li>
+			<style>
+				@keyframes hallucination {
+				  0% { 
+					opacity: 1; 
+					transform: scale(1) rotate(0deg);
+					text-shadow: 0 0 10px rgba(255,0,255,0.5);
+				  }
+				  25% {
+					opacity: 0.8; 
+					transform: scale(1.05) rotate(2deg);
+					text-shadow: 0 0 20px rgba(0,255,0,0.5);
+				  }
+				  50% { 
+					opacity: 0.6; 
+					transform: scale(0.95) rotate(-2deg);
+					text-shadow: 0 0 30px rgba(0,0,255,0.5);
+				  }
+				  75% {
+					opacity: 0.8; 
+					transform: scale(1.05) rotate(2deg);
+					text-shadow: 0 0 20px rgba(255,0,0,0.5);
+				  }
+				  100% { 
+					opacity: 1; 
+					transform: scale(1) rotate(0deg);
+					text-shadow: 0 0 10px rgba(255,0,255,0.5);
+				  }
+				}
+			  </style>
+			  <li class="fragment" style="animation: hallucination 5s infinite;">Alucinaciones</li>
+			  
           </ul>
         </section>
         <section>
-          <h2>
-            No me gusta andar copiando y pegando como en los tiempos de
-            stackOverflow, quiero sentir la velocidad…
-          </h2>
+          <h2>¿Y el código?</h2>
+          <p>Chatgpt puede…</p>
+		  <aside class="notes">
+			<p>
+			  <ul>
+			    <li>útil para scripts de bash</li>
+			    <li>incluso scripts en node para manejar archivos</li>
+			  </ul>
+			</p>
+		  </aside>
+          <ul>
+            <li class="fragment">Prototipar código</li>
+            <li class="fragment">Realizar refactors a petición</li>
+            <li class="fragment">Encontrar y señalar posibles bugs</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Copiar y pegar código es muy 2022, ¿No?</h2>
         </section>
         <section data-auto-animate>
           <div class="r-hstack justify-center">
             <img
               src="/assets/images/GitHub-Copilot-logo-1040x650.png"
-              alt="GitHub Copilot Logo"
               style="width: 200px; height: 200px; margin-right: 10px"
             />
             <h2>Github Copilot</h2>
           </div>
           <figure>
-            <img
-              src="/assets/images/copilot-video.gif"
-              alt="Copilot Video GIF"
-            />
+            <img src="/assets/images/copilot-2.gif" alt="Copilot Video GIF" />
           </figure>
           <figure>
             <img
@@ -249,7 +314,6 @@
           <div class="r-hstack justify-center">
             <img
               src="/assets/images/GitHub-Copilot-logo-1040x650.png"
-              alt="GitHub Copilot Logo"
               style="width: 200px; height: 200px; margin-right: 10px"
             />
             <h2>Github Copilot</h2>
@@ -258,36 +322,39 @@
             <li class="fragment">
               Disponible en vscode, IDEs de jetbrains, neovim…
             </li>
-            <li class="fragment">
-              Utiliza gpt-4 por debajo para autocompletar nuestro código
-            </li>
-            <li class="fragment">
-              Absorbe el contexto del archivo en el que estamos, archivos
-              relacionados, últimos archivos abiertos…
-            </li>
+            <li class="fragment">Utiliza gpt-4 por debajo</li>
             <li class="fragment">nos permite escribir código más rápido</li>
+            <li class="fragment">
+              Accede al
+              <p class="custom-font" style="display: inline">*contexto*</p>
+              de nuestro proyecto
+            </li>
           </ul>
         </section>
         <section>
           <h2>Contexto, contexto, contexto</h2>
-          <p>
-            Una de las mayores ventajas de copilot es la capacidad que tiene de
-            acceder al <p class="custom-font" style="display: inline;">*contexto*</p> de nuestro proyecto
-          </p>
-          <p>Al hacerlo, puede:</p>
           <ul>
-            <li>
-              Proporcionar sugerencias de código específicas para el proyecto en
-              el que estás trabajando
+            <li class="fragment">Archivo actual</li>
+            <li class="fragment">
+              Archivos relacionados (imports, exports, dependencias)
             </li>
-            <li>
-              Ayudarte a entender y utilizar bibliotecas y frameworks
-              específicos que usas en tu proyecto
-            </li>
+            <li class="fragment">Archivos abiertos recientemente</li>
           </ul>
         </section>
         <section>
           <h2>¿Qué pasa cuando copilot no encuentra el contexto?</h2>
+		  <aside class="notes">
+			<p>
+			  <ul>
+			    <li>Fallos de tipado</li>
+			    <li>Se inventa cosas</li>
+			    <li>Nos quedamos esperándole</li>
+				<li>no funciona</li>
+				<li>perdemos más tiempo que si lo hubiéramos hecho nosotros</li>
+				<li>A veces usamos copilot así =></li>
+			  </ul>
+			</p>
+		  </aside>
           <figure>
             <img
               src="/assets/images/drake-josh-contexto.gif"
@@ -295,6 +362,22 @@
             />
           </figure>
         </section>
+		<section>
+			<aside class="notes">
+			  <p>
+				<ul>
+				  <li>Fallos de tipado</li>
+				</ul>
+			  </p>
+			</aside>
+			<figure>
+			  <img
+				src="/assets/images/copilot-yo.gif"
+				alt="Context GIF"
+				style="width: 100%; height: auto;"
+			  />
+			</figure>
+		  </section>
         <section data-auto-animate>
           <div
             data-id="title"
@@ -347,10 +430,59 @@
           </div>
           <div style="margin-left: 5%; margin-top: 5%">
             <figure>
-              <img
-                src="/assets/images/copilot-video.gif"
-                alt="Copilot Video GIF"
-              />
+              <img src="/assets/images/cursor-1.gif" alt="Copilot Video GIF" />
+            </figure>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <div
+            data-id="title"
+            style="
+              position: absolute;
+              width: 40%;
+              right: 0;
+              top: 0%;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5),
+                0 5px 25px rgba(0, 0, 0, 0.2);
+              background-color: rgba(0, 0, 0, 0.9);
+              color: #fff;
+              padding: 20px;
+              font-size: 20px;
+              text-align: left;
+              z-index: 1;
+            "
+          >
+            <h2>Habla con el código</h2>
+          </div>
+          <div style="margin-left: 5%; margin-top: 5%">
+            <figure>
+              <img src="/assets/images/cursor-2.gif" alt="Copilot Video GIF" />
+            </figure>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <div
+            data-id="title"
+            style="
+              position: absolute;
+              width: 40%;
+              right: 0;
+              top: 0%;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5),
+                0 5px 25px rgba(0, 0, 0, 0.2);
+              background-color: rgba(0, 0, 0, 0.9);
+              color: #fff;
+              padding: 20px;
+              font-size: 20px;
+              text-align: left;
+              z-index: 1;
+            "
+          >
+            <h2>Auto-debug</h2>
+          </div>
+          <div style="margin-left: 5%; margin-top: 5%">
+            <figure>
+              <img src="/assets/images/cursor-3.gif" alt="Copilot Video GIF" />
             </figure>
           </div>
         </section>
